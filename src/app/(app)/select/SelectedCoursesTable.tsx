@@ -132,7 +132,7 @@ export function SelectedCoursesTable({ fixedCourses }: CourseTableProps) {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-1/12">Remove</TableHead>
+            <TableHead className="w-1/12">Remover</TableHead>
             <TableHead className="w-2/12">
               <Button
                 variant="ghost"

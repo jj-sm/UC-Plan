@@ -20,7 +20,7 @@ import { redirect } from "next/navigation";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "UWPlan - Select Courses",
+  title: "UC-Plan - Selecciona Ramos",
 };
 
 export default async function SelectPage() {

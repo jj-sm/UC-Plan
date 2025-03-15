@@ -17,7 +17,7 @@ export function CourseHoverLink({ course }: Props) {
       <HoverCardTrigger asChild>
         <Button asChild variant="link" className="text-blue-600">
           <Link
-            href={`https://uwflow.com/course/${course.code}`}
+            href={`https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=programa&sigla=${course.code}`}
             target="_blank"
           >
             {course.code}
@@ -28,7 +28,7 @@ export function CourseHoverLink({ course }: Props) {
         <div className="flex flex-col gap-2 text-sm">
           {course.description && (
             <div>
-              <span className="font-medium">Description: </span>
+              <span className="font-medium">Descripción: </span>
               <span className="text-muted-foreground">
                 {course.description}
               </span>
@@ -36,19 +36,19 @@ export function CourseHoverLink({ course }: Props) {
           )}
           {course.prereqs && (
             <div>
-              <span className="font-medium">Prerequisites: </span>
+              <span className="font-medium">Prerrequisitos: </span>
               <span className="text-muted-foreground">{course.prereqs}</span>
             </div>
           )}
           {course.antireqs && (
             <div>
-              <span className="font-medium">Antirequisites: </span>
+              <span className="font-medium">Equivalencias: </span>
               <span className="text-muted-foreground">{course.antireqs}</span>
             </div>
           )}
           {course.coreqs && (
             <div>
-              <span className="font-medium">Corequisites: </span>
+              <span className="font-medium">Anualidad: </span>
               <span className="text-muted-foreground">{course.coreqs}</span>
             </div>
           )}

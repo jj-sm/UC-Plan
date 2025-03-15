@@ -164,8 +164,8 @@ export function CourseTable({
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-1/12">Take?</TableHead>
-            <TableHead className="w-1/12">Taken</TableHead>
+            <TableHead className="w-1/12">¿Tomar Ramo?</TableHead>
+            <TableHead className="w-1/12">Ramos Tomados</TableHead>
             <TableHead className="w-2/12">
               <Button
                 variant="ghost"
@@ -346,7 +346,7 @@ export function CourseTable({
                         toast.error("Failed to update free course");
                       }
                     }}
-                    placeholder="Course code"
+                    placeholder="Sigla del Ramo"
                     className="w-fit text-sm"
                   />
                   {freeCourse.course && (
@@ -357,7 +357,7 @@ export function CourseTable({
                 </div>
               </TableCell>
               <TableCell className="px-6">
-                {freeCourse.course?.name ?? "No course selected"}
+                {freeCourse.course?.name ?? "Ningún ramo seleccionado"}
               </TableCell>
               <TableCell className="px-6 text-right">
                 {formatRating(freeCourse.course?.usefulRating)}

@@ -30,7 +30,7 @@ export function TermRangeSelector({
   return (
     <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
       <div className="flex items-center gap-2">
-        <span className="text-sm font-medium">From:</span>
+        <span className="text-sm font-medium">Desde:</span>
         <Select
           value={startTerm.season}
           onValueChange={(season: Season) =>
@@ -67,7 +67,7 @@ export function TermRangeSelector({
         </Select>
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-sm font-medium">To:</span>
+        <span className="text-sm font-medium">Hasta:</span>
         <Select
           value={endTerm.season}
           onValueChange={(season: Season) =>

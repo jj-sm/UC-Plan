@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import {Text} from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -11,15 +12,16 @@ export default function HomePage() {
           Welcome to UWPlan
         </h1>
         <p className="max-w-[600px] text-lg text-muted-foreground sm:text-xl">
-          The smarter way to plan your University of Waterloo degree. Build
-          schedules, track requirements, and make informed course decisions.
+          La manera inteligente de planear tus ramos en la UC; planea tu malla teniendo en cuenta equivalencias y restricciones.
+          Esta herramienta se encuentra en fase (Beta) por ahora únicamente implementada para las mallas de Astronomía (:D) y Física (Pregrados).
+          <blockquote>*Esta herramienta se implementó y adaptó del proyecto existente de la Universidad de Waterloo. <Link href={"https://github.com/pl3lee/uwplan"}>Repositorio original</Link> </blockquote>
         </p>
         <div className="space-x-4">
           <Button size="lg" asChild>
-            <Link href="/signin">Get Started</Link>
+            <Link href="/signin">¡Comencemos!</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a href="#features">Learn More</a>
+            <a href="#features">Leer más...</a>
           </Button>
         </div>
         {/* Demo Video */}
@@ -52,9 +54,9 @@ export default function HomePage() {
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold">Track Requirements</h3>
+          <h3 className="text-xl font-bold">Revisa los requisitos</h3>
           <p className="text-muted-foreground">
-            Easily monitor your progress towards graduation requirements
+            Monitorea fácilmente tu progreso académico y avance curricular
           </p>
         </div>
 
@@ -74,9 +76,9 @@ export default function HomePage() {
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold">Plan Schedules</h3>
+          <h3 className="text-xl font-bold">Ordena tus ramos</h3>
           <p className="text-muted-foreground">
-            Build and compare different course schedules across terms
+            Construye y organiza diferentes ramos a lo largo de tus semestres
           </p>
         </div>
 
@@ -96,9 +98,9 @@ export default function HomePage() {
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold">Course Ratings</h3>
+          <h3 className="text-xl font-bold">Atención al detalle</h3>
           <p className="text-muted-foreground">
-            Make informed decisions with real student ratings and reviews
+            También se tienen en cuenta los ramos que son anuales y su número de créditos
           </p>
         </div>
       </div>
@@ -108,38 +110,34 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-16">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-8 text-center text-4xl font-bold tracking-tighter sm:text-5xl">
-              About UWPlan
+              Acerca de UC-Plan
             </h2>
 
             {/* Mission Section */}
             <section className="mb-16">
-              <h2 className="mb-4 text-2xl font-bold">Our Mission</h2>
+              <h2 className="mb-4 text-2xl font-bold">Nuestra misión</h2>
               <p className="mb-6 text-lg text-muted-foreground">
-                UWPlan was created to simplify the complex process of degree
-                planning for University of Waterloo students. We believe that
-                every student should have access to the tools and information
-                they need to make informed decisions about their academic
-                journey.
+                UC-Plan surgió gracias a la necesidad de facilitar el proceso de planear 
+                ramos a lo largo de una carrera, pues la malla sugerida no siempre se adapta a 
+                las necesidades individuales de los estudiantes. Asímismo, esta herramienta 
+                brinda un seguimiento más claro de el avance curricular de los alumnos.
               </p>
               <p className="text-lg text-muted-foreground">
-                By combining course information, student ratings, and a course
-                planning system, we help students create optimal degree plans
-                that meet all their requirements while considering their
-                interests and goals.
+                Combinando la información anual de los ramos podemos llegar a construir esta herramienta. 
+                Por ahora, la construcción de currículums está restringida a una implementación manual. Se
+                verán soluciones más adelante para facilitar este proceso. Por ahora la única manera es siguiendo 
+                nuestra plantilla en <Link href={"https://github.com/jj-sm/UC-Plan"}>GitHub</Link> y creando una Issue relacionada.
               </p>
             </section>
 
             {/* Built For Students Section */}
             <section className="mb-16">
               <h2 className="mb-4 text-2xl font-bold">
-                Built For Students, By Students
+                ¡Hecho por estudiantes, para estudiantes!
               </h2>
               <p className="mb-6 text-lg text-muted-foreground">
-                As UWaterloo students ourselves, we understand the challenges of
-                planning courses and meeting degree requirements. UWPlan was
-                built with the specific needs of UWaterloo students in mind,
-                integrating with existing tools like UWFlow to provide a
-                comprehensive planning experience.
+                Como estudiante propio de la UC, esta herramienta me hubiese facilitado muchos
+                procesos a lo largo de mi carrera en la UC.
               </p>
             </section>
 
@@ -147,10 +145,8 @@ export default function HomePage() {
             <section className="mb-16">
               <h2 className="mb-4 text-2xl font-bold">Open Source</h2>
               <p className="mb-6 text-lg text-muted-foreground">
-                UWPlan is open source and built with modern web technologies. We
-                believe in transparency and community contribution. Check out
-                our GitHub repository to see how you can contribute to making
-                UWPlan even better.
+                Ten en cuenta, que como se mencionó antes, este es una adaptación e implementación del
+                repositorio ya existente de la Universidad de Waterloo. Y, ¡este trabajo también es de código abierto!
               </p>
               <div className="flex justify-center space-x-4">
                 <a
@@ -166,7 +162,7 @@ export default function HomePage() {
                   >
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
                   </svg>
-                  <span>View on GitHub</span>
+                  <span>Mira el GitHub</span>
                 </a>
               </div>
             </section>
@@ -179,11 +175,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-16">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold tracking-tighter sm:text-5xl">
-              Features
+              Novedades
             </h2>
             <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
-              Everything you need to plan your University of Waterloo degree
-              journey
+              Todo lo que necesitas para planear tu avance curricular en la UC
             </p>
           </div>
 
@@ -191,11 +186,10 @@ export default function HomePage() {
             {/* Feature 1: Course Planning */}
             <div className="grid items-center gap-8 md:grid-cols-2">
               <div>
-                <h2 className="mb-4 text-3xl font-bold">Course Planning</h2>
+                <h2 className="mb-4 text-3xl font-bold">Planea tus Ramos</h2>
                 <p className="mb-6 text-lg text-muted-foreground">
-                  Plan your degree with our straightforward course selection
-                  system. Keep track of your courses and requirements all in one
-                  place.
+                  Planea tus ramos y cuando los vas a tomar con nuestra fácil selección y
+                  alertas en casos de conflictos de requisitos
                 </p>
                 <ul className="mb-6 space-y-2">
                   <li className="flex items-center">
@@ -212,7 +206,7 @@ export default function HomePage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Term-by-term schedule planning
+                    Planea tu curso semestre a semestre
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -228,7 +222,7 @@ export default function HomePage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Degree requirement tracking
+                    Lleva constantemente un seguimiento a tu avance académico
                   </li>
                 </ul>
               </div>
@@ -258,11 +252,12 @@ export default function HomePage() {
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="mb-4 text-3xl font-bold">
-                  Course Ratings & Reviews
+                  Requisitos y Equivalencias
                 </h2>
                 <p className="mb-6 text-lg text-muted-foreground">
-                  Make informed decisions about your courses using real data
-                  from UWFlow and feedback from fellow students.
+                  No te preocupes por saber si puedes tomar el ramo, nosotros
+                   te ayudaremos a verificar esto teniendo en cuenta los requisitos y
+                  equivalencias.
                 </p>
                 <ul className="mb-6 space-y-2">
                   <li className="flex items-center">
@@ -279,7 +274,7 @@ export default function HomePage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Course difficulty ratings
+                    También tenemos en cuenta si el curso es anual
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -295,7 +290,7 @@ export default function HomePage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Usefulness ratings
+                    Te brindaremos una breve descripción del curso
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -311,7 +306,7 @@ export default function HomePage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Real student feedback
+                    Originalmente hecho para Lic. Astronomía
                   </li>
                 </ul>
               </div>
@@ -323,12 +318,12 @@ export default function HomePage() {
       {/* Bottom CTA */}
       <div className="w-full bg-background py-16 text-center">
         <div className="mx-auto max-w-2xl space-y-4">
-          <h2 className="text-3xl font-bold">Start Planning Your Degree</h2>
+          <h2 className="text-3xl font-bold">Comienza a plenar tu Carrera</h2>
           <p className="text-lg text-muted-foreground">
-            Join the next generation of smarter course planning at UWaterloo
+            Únete a la siguiente generación de estudiantes planeando tus ramos con UC-Plan
           </p>
           <Button size="lg" asChild className="mt-4">
-            <Link href="/signin">Start Planning Today →</Link>
+            <Link href="/signin">Comienza a planear tus ramos hoy →</Link>
           </Button>
         </div>
       </div>
@@ -339,14 +334,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Product */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold">Product</h4>
+              <h4 className="text-lg font-semibold">Producto</h4>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="#features"
                     className="text-muted-foreground hover:text-primary"
                   >
-                    Features
+                    Novedades
                   </Link>
                 </li>
                 <li>
@@ -354,7 +349,7 @@ export default function HomePage() {
                     href="#about"
                     className="text-muted-foreground hover:text-primary"
                   >
-                    About
+                    Acerca de Nosotros
                   </Link>
                 </li>
                 <li>
@@ -362,7 +357,7 @@ export default function HomePage() {
                     href="/privacy"
                     className="text-muted-foreground hover:text-primary"
                   >
-                    Privacy Policy
+                    Política de Privacidad
                   </Link>
                 </li>
               </ul>
@@ -370,10 +365,10 @@ export default function HomePage() {
 
             {/* Social */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold">Connect</h4>
+              <h4 className="text-lg font-semibold">Contáctanos</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/pl3lee/uwplan"
+                  href="https://github.com/jj-sm/UC-Plan"
                   className="text-muted-foreground hover:text-primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -394,7 +389,7 @@ export default function HomePage() {
           <div className="mt-12 border-t pt-8">
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} UWPlan. All rights reserved.
+                © {new Date().getFullYear()} UWPlan | jj-sm | CEFF. Todos los derechos reservados.
               </p>
             </div>
           </div>

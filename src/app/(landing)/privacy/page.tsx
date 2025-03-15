@@ -21,72 +21,68 @@ export default function PrivacyPage() {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          Back to Home
+          Regresar
         </Link>
       </div>
 
       <h1 className="mb-8 text-4xl font-bold tracking-tighter">
-        Privacy Policy
+        Política de Privacidad
       </h1>
 
       <div className="prose prose-gray dark:prose-invert max-w-none">
         <section className="mb-8">
           <h2 className="mb-4 text-2xl font-semibold">
-            Information We Collect
+            ¿Qué información recolectamos?
           </h2>
           <p className="mb-4 text-muted-foreground">
-            We collect information that you provide directly to us when you use
-            UWPlan:
+            Recolectamos únicamente la información necesaria cuando usas UC-Plan
           </p>
           <ul className="mb-4 list-disc pl-6 text-muted-foreground">
-            <li>Your email address</li>
-            <li>Course selections and schedules you create</li>
+            <li>Correo Electrónico</li>
+            <li>Selección de cursos y las mallas que creaste</li>
           </ul>
         </section>
 
         <section className="mb-8">
           <h2 className="mb-4 text-2xl font-semibold">
-            How We Use Your Information
+            ¿Cómo usamos tu información?
           </h2>
           <p className="mb-4 text-muted-foreground">
-            We use the information we collect to:
+            Usamos tu información para:
           </p>
           <ul className="mb-4 list-disc pl-6 text-muted-foreground">
-            <li>Provide and improve UWPlan services</li>
-            <li>Save your course selections and degree progress</li>
+            <li>Mejorar nuestra app</li>
+            <li>Guardar tus selecciones y progreso</li>
           </ul>
         </section>
 
         <section className="mb-8">
           <h2 className="mb-4 text-2xl font-semibold">
-            Data Storage and Security
+            Almacenamiento de datos y Seguridad
           </h2>
           <p className="mb-4 text-muted-foreground">
-            Your data is stored securely and we take reasonable measures to
-            protect it. We do not sell your personal information to third
-            parties.
+            Tus datos están guardados de manera segura y NO son vendidos o compartidos con terceros
           </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold">Your Rights</h2>
-          <p className="mb-4 text-muted-foreground">You have the right to:</p>
+          <h2 className="mb-4 text-2xl font-semibold">Tus derechos</h2>
+          <p className="mb-4 text-muted-foreground">Tienes derecho a:</p>
           <ul className="mb-4 list-disc pl-6 text-muted-foreground">
-            <li>Access your personal information</li>
-            <li>Request deletion of your data</li>
+            <li>Acceder a tu información personal</li>
+            <li>Solicitar la eliminación de tus datos</li>
           </ul>
         </section>
 
         <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold">Contact Us</h2>
+          <h2 className="mb-4 text-2xl font-semibold">Contáctanos</h2>
           <p className="text-muted-foreground">
-            If you have any questions about this Privacy Policy, please contact
-            us at{" "}
+            Si tienes alguna duda relacionada con UC-Plan contáctanos en: {" "}
             <a
-              href="mailto:privacy@uwplan.ca"
+              href="mailto:jjsanchezmedina@gmail.com"
               className="text-primary hover:underline"
             >
-              privacy@uwplan.ca
+              Correo del Desarrollador
             </a>
           </p>
         </section>
